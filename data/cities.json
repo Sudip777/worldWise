@@ -4,62 +4,51 @@
       "cityName": "Kathmandu",
       "country": "Nepal",
       "emoji": "🇳🇵",
-      "date": "2010-07-15T08:22:53.976Z",
-      "notes": "",
+      "date": "2015-07-15T08:22:53.976Z",
+      "notes": "Historic City: City of Temples🛕",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
+        "lat": 27.7172453,
+        "lng": 85.3239605
       },
       "id": 178067513234
     },
     {
-      "cityName": "Pokhera",
+      "cityName": "Pokhara",
       "country": "Nepal",
       "emoji": "🇳🇵",
-      "date": "2015-02-12T09:24:11.863Z",
+      "date": "2016-02-12T09:24:11.863Z",
       "notes": "Amazing 😃",
       "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
+        "lat": 28.2096005,
+        "lng": 83.9856015
       },
       "id": 984431973234
     },
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
+      "cityName": "Bangkok",
+      "country": "Thailand",
+      "emoji": "🇹🇭",
+      "date": "2018-10-31T15:59:59.138Z",
+      "notes": "",
       "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
+        "lat": 13.7563309,
+        "lng": 100.5017651
       },
       "id": 73930385
     },
     {
-      "cityName": "Madrid",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
-      "notes": "",
+      "cityName": "Dubai",
+      "country": "UAE",
+      "emoji": "🇦🇪",
+      "date": "2020-07-15T08:22:53.976Z",
+      "notes": "Awesome",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
+        "lat": 25.2769873,
+        "lng": 55.2962493
       },
-      "id": 1780675134
-    },
-    {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
-      "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
-      },
-      "id": 9844319734
+      "id": 17806751341221
     }
+    
     
     
   ]

@@ -58,8 +58,7 @@ export default function App() {
               path="cities"
               element={
                 <CityList
-                  cities={cities}
-                  isLoading={isLoading}
+                 
                 />
               }
             />
@@ -72,8 +71,7 @@ export default function App() {
               path="countries"
               element={
                 <CountriesList
-                  cities={cities}
-                  isLoading={isLoading}
+                 
                 />
               }
             />
