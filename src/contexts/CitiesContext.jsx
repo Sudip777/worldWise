@@ -5,7 +5,7 @@ import {
   useState,
 } from "react"
 
-const BASE_URL = "http://localhost:9000/cities"
+const BASE_URL = "http://localhost:9000"
 
 const CitiesContext = createContext()
 
@@ -19,7 +19,7 @@ function CitiesProvider({ children }) {
   useEffect(() => {
     async function fetchCities() {
       try {
-        const res = await fetch(`${BASE_URL}`)
+        const res = await fetch(`${BASE_URL}/cities`)
         const data = await res.json()
         setCities(data)
       } catch (error) {
@@ -36,9 +36,28 @@ function CitiesProvider({ children }) {
 
   async function getCity(id) {
     try {
-      const res = await fetch(`${BASE_URL}/${id}`) // Changed URL
+      const res = await fetch(`${BASE_URL}/cities${id}`) // Changed URL
       const data = await res.json()
       setCurrentCity(data)
+    } catch (error) {
+      console.error("Error loading city:", error)
+    }
+  }
+
+
+  async function createCity(newCity) {
+    try {
+      setIsLoading(true)
+      const res = await fetch(`${BASE_URL}/cities`, {
+        method: 'POST',
+        body: JSON.stringify(newCity),
+        headers: {
+          "Content-Type": "application/json"
+        },
+      }) // Changed URL
+      const data = await res.json()
+      setCities((cities)=> [...cities, data])
+
     } catch (error) {
       console.error("Error loading city:", error)
     }
@@ -51,6 +70,7 @@ function CitiesProvider({ children }) {
         isLoading,
         currentCity,
         getCity,
+        createCity
       }}
     >
       {children}
