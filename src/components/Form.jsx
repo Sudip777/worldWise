@@ -16,12 +16,28 @@ import { useCities } from "../contexts/CitiesContext";
 import { create } from "json-server";
 
 export function convertToEmoji(countryCode) {
-  const codePoints = countryCode
-    .toUpperCase()
-    .split("")
-    .map((char) => 127397 + char.charCodeAt());
-  return String.fromCodePoint(...codePoints);
+  console.log("countryCode:", countryCode);
+
+  try {
+    const codePoints = countryCode
+      .toUpperCase()
+      .split("")
+      .map((char) => 127397 + char.charCodeAt());
+
+    console.log("codePoints:", codePoints);
+
+    if (codePoints.length > 0) {
+      return String.fromCodePoint(...codePoints);
+    } else {
+      console.warn("Empty codePoints array. Returning empty string.");
+      return "";
+    }
+  } catch (error) {
+    console.error("Error in convertToEmoji:", error);
+    return ""; // or provide a default emoji or handle it according to your requirement
+  }
 }
+
 
 const BASE_URL = "https://api.bigdatacloud.net/data/reverse-geocode-client"
 
@@ -51,6 +67,8 @@ function Form() {
 
         const res = await fetch(`${BASE_URL}?latitude=${lat}&longitude=${lng}`)
         const data = await res.json();
+        console.log("Response data:", data);
+
 
         if(!data.countryCode)
         throw new Error(
@@ -62,7 +80,7 @@ function Form() {
         setEmoji(convertToEmoji(data.countryCode))
          
       } catch (error) {
-        setGeocodingError(err.message)
+        setGeocodingError(error.message)
         
       } finally{
         setIsLoadingGeocoding(false)

@@ -19,7 +19,8 @@
     "react-dom": "^18.2.0",
     "react-leaflet": "^4.2.1",
     "react-router-dom": "^6.14.2",
-    "server": "^1.0.38"
+    "server": "^1.0.38",
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
